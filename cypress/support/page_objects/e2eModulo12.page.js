@@ -1,19 +1,19 @@
 class NomeClasse {
 
-   selecaoProdutos(){
+   selecaoProdutos(tamanho, cor, quantidade){
     cy.get('[class="image-hover unveil-image"]').eq(0).click()
-        cy.get('.button-variable-item-XL').click()
-        cy.get('.button-variable-item-Red').click()
-        cy.get('.input-text').clear().type('4')
+        cy.get('.button-variable-item-' + tamanho).click()
+        cy.get('.button-variable-item-' + cor).click()
+        cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
    }
 
-   loginPosEscolha(){
+   loginPosEscolha(usuario, senha){
     cy.get('.showlogin').click() //clique para logar após ter escolhido os produtos
-    cy.get('#username').type('aluno_ebac@teste.com')
-    cy.get('#password').type('teste@teste.com')
+    cy.get('#username').type(usuario)
+    cy.get('#password').type(senha)
     cy.get('.woocommerce-button').click()
    }
    

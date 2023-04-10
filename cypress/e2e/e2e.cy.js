@@ -16,8 +16,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        e2eModulo12Page.selecaoProdutos()
-        e2eModulo12Page.loginPosEscolha()
+        e2eModulo12Page.selecaoProdutos('XL', 'Red', '4')
+        e2eModulo12Page.loginPosEscolha('aluno_ebac@teste.com', 'teste@teste.com')
          e2eModulo12Page.dadosFaturamento(
         'João', 
         'Victor', 
@@ -32,13 +32,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         'meu@email.com'
         )
         e2eModulo12Page.formaPagamento()
-
-
-       
-
-
-        
     });
-
+    
 
 })
