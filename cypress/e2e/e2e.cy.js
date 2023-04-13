@@ -32,6 +32,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         'meu@email.com'
         )
         e2eModulo12Page.formaPagamento()
+        cy.get('.page-title').should('be.visible')
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
     });
     
 
