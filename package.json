@@ -8,7 +8,8 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
     "cy:dashboard": "",
-    "cy:report": ""
+    "cy:report": "",
+    "cy:run-ci": " start-server-and-test start http://localhost:3000/usuarios test"
   },
   "repository": {
     "type": "git",
